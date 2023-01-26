@@ -11,6 +11,13 @@ void main() => runApp(
 class CatApp extends StatelessWidget {
   const CatApp({Key? key}) : super(key: key);
 
+  void playSound(String nameOfFile) {
+    final player = AudioPlayer();
+    player.play(
+      AssetSource(nameOfFile),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,10 +38,7 @@ class CatApp extends StatelessWidget {
                       primary: Color(0xFFD3756B),
                     ),
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('angry.wav'),
-                      );
+                      playSound('angry.wav');
                     },
                     child: Image.asset('images/angry.png'),
                   ),
@@ -45,10 +49,7 @@ class CatApp extends StatelessWidget {
                       primary: Color(0xFFFFC3A1),
                     ),
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('purring.wav'),
-                      );
+                      playSound('purring.wav');
                     },
                     child: Image.asset('images/purring.png'),
                   ),
@@ -63,10 +64,7 @@ class CatApp extends StatelessWidget {
                       primary: Color(0xFFFFC3A1),
                     ),
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('sad.wav'),
-                      );
+                      playSound('sad.wav');
                     },
                     child: Image.asset('images/pisi.png'),
                   ),
@@ -77,10 +75,7 @@ class CatApp extends StatelessWidget {
                       primary: Color(0xFFD3756B),
                     ),
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('cat_m.mp3'),
-                      );
+                      playSound('cat_m.mp3');
                     },
                     child: Image.asset('images/catt.png'),
                   ),
@@ -95,10 +90,7 @@ class CatApp extends StatelessWidget {
                       primary: Color(0xFFD3756B),
                     ),
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('short_meow.wav'),
-                      );
+                      playSound('short_meow.wav');
                     },
                     child: Image.asset('images/short_meow.png'),
                   ),
@@ -109,10 +101,7 @@ class CatApp extends StatelessWidget {
                       primary: Color(0xFFFFC3A1),
                     ),
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('surprised.wav'),
-                      );
+                      playSound('surprised.wav');
                     },
                     child: Image.asset('images/surprised.png'),
                   ),
@@ -127,10 +116,7 @@ class CatApp extends StatelessWidget {
                       primary: Color(0xFFFFC3A1),
                     ),
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('upset.wav'),
-                      );
+                      playSound('upset.wav');
                     },
                     child: Image.asset('images/upset.png'),
                   ),
@@ -141,10 +127,7 @@ class CatApp extends StatelessWidget {
                       primary: Color(0xFFD3756B),
                     ),
                     onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('cat_food.wav'),
-                      );
+                      playSound('cat_food.wav');
                     },
                     child: Image.asset('images/cat_food.png'),
                   ),
