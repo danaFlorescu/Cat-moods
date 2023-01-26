@@ -65,7 +65,7 @@ class CatApp extends StatelessWidget {
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
-                        AssetSource('figthing.wav'),
+                        AssetSource('sad.wav'),
                       );
                     },
                     child: Image.asset('images/pisi.png'),
@@ -79,10 +79,10 @@ class CatApp extends StatelessWidget {
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
-                        AssetSource('screaming_cat.wav'),
+                        AssetSource('cat_m.mp3'),
                       );
                     },
-                    child: Image.asset('images/satisfied2.png'),
+                    child: Image.asset('images/catt.png'),
                   ),
                 ),
               ],
