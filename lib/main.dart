@@ -15,7 +15,7 @@ class CatApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFFD3756B),
+        backgroundColor: Color(0xffF0997D),
         appBar: AppBar(
           title: Text('Choose a cat'),
           backgroundColor: Color(0xffA75D5D),
@@ -26,7 +26,7 @@ class CatApp extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: ElevatedButton(
+                  child: OutlinedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFFD3756B),
                     ),
@@ -40,9 +40,9 @@ class CatApp extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: ElevatedButton(
+                  child: OutlinedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFD3756B),
+                      primary: Color(0xFFFFC3A1),
                     ),
                     onPressed: () {
                       final player = AudioPlayer();
@@ -58,7 +58,39 @@ class CatApp extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: ElevatedButton(
+                  child: OutlinedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFFFC3A1),
+                    ),
+                    onPressed: () {
+                      final player = AudioPlayer();
+                      player.play(
+                        AssetSource('figthing.wav'),
+                      );
+                    },
+                    child: Image.asset('images/pisi.png'),
+                  ),
+                ),
+                Expanded(
+                  child: OutlinedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFD3756B),
+                    ),
+                    onPressed: () {
+                      final player = AudioPlayer();
+                      player.play(
+                        AssetSource('screaming_cat.wav'),
+                      );
+                    },
+                    child: Image.asset('images/satisfied2.png'),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFFD3756B),
                     ),
@@ -72,41 +104,9 @@ class CatApp extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: ElevatedButton(
+                  child: OutlinedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFD3756B),
-                    ),
-                    onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('screaming_cat.wav'),
-                      );
-                    },
-                    child: Image.asset('images/screaming_cat.png'),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFD3756B),
-                    ),
-                    onPressed: () {
-                      final player = AudioPlayer();
-                      player.play(
-                        AssetSource('figthing.wav'),
-                      );
-                    },
-                    child: Image.asset('images/figthing.png'),
-                  ),
-                ),
-                Expanded(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFD3756B),
+                      primary: Color(0xFFFFC3A1),
                     ),
                     onPressed: () {
                       final player = AudioPlayer();
@@ -122,9 +122,9 @@ class CatApp extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: ElevatedButton(
+                  child: OutlinedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFD3756B),
+                      primary: Color(0xFFFFC3A1),
                     ),
                     onPressed: () {
                       final player = AudioPlayer();
@@ -136,7 +136,7 @@ class CatApp extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: ElevatedButton(
+                  child: OutlinedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFFD3756B),
                     ),
