@@ -18,6 +18,20 @@ class CatApp extends StatelessWidget {
     );
   }
 
+  Expanded buildCat(String catMood, Color color) {
+    return Expanded(
+      child: OutlinedButton(
+        style: ElevatedButton.styleFrom(
+          primary: color,
+        ),
+        onPressed: () {
+          playSound('$catMood.wav');
+        },
+        child: Image.asset('images/$catMood.png'),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,106 +46,26 @@ class CatApp extends StatelessWidget {
           children: [
             Row(
               children: [
-                Expanded(
-                  child: OutlinedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFD3756B),
-                    ),
-                    onPressed: () {
-                      playSound('angry.wav');
-                    },
-                    child: Image.asset('images/angry.png'),
-                  ),
-                ),
-                Expanded(
-                  child: OutlinedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFFFC3A1),
-                    ),
-                    onPressed: () {
-                      playSound('purring.wav');
-                    },
-                    child: Image.asset('images/purring.png'),
-                  ),
-                ),
+                buildCat('angry', Color(0xFFD3756B)),
+                buildCat('purring', Color(0xFFFFC3A1)),
               ],
             ),
             Row(
               children: [
-                Expanded(
-                  child: OutlinedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFFFC3A1),
-                    ),
-                    onPressed: () {
-                      playSound('sad.wav');
-                    },
-                    child: Image.asset('images/pisi.png'),
-                  ),
-                ),
-                Expanded(
-                  child: OutlinedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFD3756B),
-                    ),
-                    onPressed: () {
-                      playSound('cat_m.mp3');
-                    },
-                    child: Image.asset('images/catt.png'),
-                  ),
-                ),
+                buildCat('sad', Color(0xFFFFC3A1)),
+                buildCat('puzzled', Color(0xFFD3756B)),
               ],
             ),
             Row(
               children: [
-                Expanded(
-                  child: OutlinedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFD3756B),
-                    ),
-                    onPressed: () {
-                      playSound('short_meow.wav');
-                    },
-                    child: Image.asset('images/short_meow.png'),
-                  ),
-                ),
-                Expanded(
-                  child: OutlinedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFFFC3A1),
-                    ),
-                    onPressed: () {
-                      playSound('surprised.wav');
-                    },
-                    child: Image.asset('images/surprised.png'),
-                  ),
-                ),
+                buildCat('short_meow', Color(0xFFD3756B)),
+                buildCat('surprised', Color(0xFFFFC3A1)),
               ],
             ),
             Row(
               children: [
-                Expanded(
-                  child: OutlinedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFFFC3A1),
-                    ),
-                    onPressed: () {
-                      playSound('upset.wav');
-                    },
-                    child: Image.asset('images/upset.png'),
-                  ),
-                ),
-                Expanded(
-                  child: OutlinedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFD3756B),
-                    ),
-                    onPressed: () {
-                      playSound('cat_food.wav');
-                    },
-                    child: Image.asset('images/cat_food.png'),
-                  ),
-                ),
+                buildCat('upset', Color(0xFFFFC3A1)),
+                buildCat('cat_food', Color(0xFFD3756B)),
               ],
             ),
           ],
