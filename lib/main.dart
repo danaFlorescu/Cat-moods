@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'constans.dart';
 
 void main() => runApp(
       const CatApp(),
@@ -46,26 +47,26 @@ class CatApp extends StatelessWidget {
           children: [
             Row(
               children: [
-                buildCat('angry', Color(0xFFD3756B)),
-                buildCat('purring', Color(0xFFFFC3A1)),
+                buildCat('angry', kImgColorDark),
+                buildCat('purring', kImgColorLight),
               ],
             ),
             Row(
               children: [
-                buildCat('sad', Color(0xFFFFC3A1)),
-                buildCat('puzzled', Color(0xFFD3756B)),
+                buildCat('sad', kImgColorLight),
+                buildCat('puzzled', kImgColorDark),
               ],
             ),
             Row(
               children: [
-                buildCat('short_meow', Color(0xFFD3756B)),
-                buildCat('surprised', Color(0xFFFFC3A1)),
+                buildCat('short_meow', kImgColorDark),
+                buildCat('surprised', kImgColorLight),
               ],
             ),
             Row(
               children: [
-                buildCat('upset', Color(0xFFFFC3A1)),
-                buildCat('cat_food', Color(0xFFD3756B)),
+                buildCat('upset', kImgColorLight),
+                buildCat('cat_food', kImgColorDark),
               ],
             ),
           ],
