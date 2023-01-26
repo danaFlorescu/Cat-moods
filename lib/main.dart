@@ -21,11 +21,15 @@ class CatApp extends StatelessWidget {
           backgroundColor: Color(0xffA75D5D),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Row(
               children: [
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFD3756B),
+                    ),
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
@@ -37,6 +41,9 @@ class CatApp extends StatelessWidget {
                 ),
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFD3756B),
+                    ),
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
@@ -52,6 +59,9 @@ class CatApp extends StatelessWidget {
               children: [
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFD3756B),
+                    ),
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
@@ -63,6 +73,9 @@ class CatApp extends StatelessWidget {
                 ),
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFD3756B),
+                    ),
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
@@ -78,6 +91,9 @@ class CatApp extends StatelessWidget {
               children: [
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFD3756B),
+                    ),
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
@@ -89,6 +105,9 @@ class CatApp extends StatelessWidget {
                 ),
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFD3756B),
+                    ),
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
@@ -104,6 +123,9 @@ class CatApp extends StatelessWidget {
               children: [
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFD3756B),
+                    ),
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
@@ -115,6 +137,9 @@ class CatApp extends StatelessWidget {
                 ),
                 Expanded(
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFD3756B),
+                    ),
                     onPressed: () {
                       final player = AudioPlayer();
                       player.play(
