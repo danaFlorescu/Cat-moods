@@ -21,7 +21,7 @@ class CatApp extends StatelessWidget {
 
   Expanded buildCat(String catMood, Color color) {
     return Expanded(
-      child: OutlinedButton(
+      child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: color,
         ),
@@ -43,31 +43,39 @@ class CatApp extends StatelessWidget {
           backgroundColor: Color(0xffA75D5D),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              children: [
-                buildCat('angry', kImgColorDark),
-                buildCat('purring', kImgColorLight),
-              ],
+            Expanded(
+              child: Row(
+                children: [
+                  buildCat('angry', kImgColorDark),
+                  buildCat('purring', kImgColorLight),
+                ],
+              ),
             ),
-            Row(
-              children: [
-                buildCat('sad', kImgColorLight),
-                buildCat('puzzled', kImgColorDark),
-              ],
+            Expanded(
+              child: Row(
+                children: [
+                  buildCat('sad', kImgColorLight),
+                  buildCat('puzzled', kImgColorDark),
+                ],
+              ),
             ),
-            Row(
-              children: [
-                buildCat('short_meow', kImgColorDark),
-                buildCat('surprised', kImgColorLight),
-              ],
+            Expanded(
+              child: Row(
+                children: [
+                  buildCat('short_meow', kImgColorDark),
+                  buildCat('surprised', kImgColorLight),
+                ],
+              ),
             ),
-            Row(
-              children: [
-                buildCat('upset', kImgColorLight),
-                buildCat('cat_food', kImgColorDark),
-              ],
+            Expanded(
+              child: Row(
+                children: [
+                  buildCat('upset', kImgColorLight),
+                  buildCat('cat_food', kImgColorDark),
+                ],
+              ),
             ),
           ],
         ),
