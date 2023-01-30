@@ -37,7 +37,10 @@ class _CatAppClassState extends State<CatAppClass> {
   }
 
 // 1 - play, 2-stop
-  Expanded buildCat(String catMood, Color color, String extension) {
+  Expanded buildCat(
+      {required String catMood,
+      required Color color,
+      String extension = 'wav'}) {
     return Expanded(
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
@@ -65,32 +68,33 @@ class _CatAppClassState extends State<CatAppClass> {
           Expanded(
             child: Row(
               children: [
-                buildCat('angry', kImgColorDark, 'wav'),
-                buildCat('purring', kImgColorLight, 'wav'),
+                buildCat(catMood: 'angry', color: kImgColorDark),
+                buildCat(catMood: 'purring', color: kImgColorLight),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                buildCat('sad', kImgColorLight, 'wav'),
-                buildCat('puzzled', kImgColorDark, 'mp3'),
+                buildCat(catMood: 'sad', color: kImgColorLight),
+                buildCat(
+                    catMood: 'puzzled', color: kImgColorDark, extension: 'mp3'),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                buildCat('short_meow', kImgColorDark, 'wav'),
-                buildCat('surprised', kImgColorLight, 'wav'),
+                buildCat(catMood: 'short_meow', color: kImgColorDark),
+                buildCat(catMood: 'surprised', color: kImgColorLight),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                buildCat('upset', kImgColorLight, 'wav'),
-                buildCat('cat_food', kImgColorDark, 'wav'),
+                buildCat(catMood: 'upset', color: kImgColorLight),
+                buildCat(catMood: 'cat_food', color: kImgColorDark),
               ],
             ),
           ),
