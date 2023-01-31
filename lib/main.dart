@@ -4,6 +4,8 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'constans.dart';
+import 'cat_mood.dart';
+import 'moods_list.dart';
 
 void main() => runApp(
       CatApp(),
@@ -21,13 +23,13 @@ class CatApp extends StatelessWidget {
 }
 
 class CatAppClass extends StatefulWidget {
-  const CatAppClass({Key? key}) : super(key: key);
-
   @override
   State<CatAppClass> createState() => _CatAppClassState();
 }
 
 class _CatAppClassState extends State<CatAppClass> {
+  MoodList myMoodList = MoodList();
+
   AudioPlayer player = AudioPlayer();
 
   void playSound(String nameOfFile) {
@@ -36,20 +38,16 @@ class _CatAppClassState extends State<CatAppClass> {
     );
   }
 
-// 1 - play, 2-stop
-  Expanded buildCat(
-      {required String catMood,
-      required Color color,
-      String extension = 'wav'}) {
+  Expanded buildCat({required CatMood myCatMood}) {
     return Expanded(
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: color,
+          primary: myCatMood.color,
         ),
         onPressed: () {
-          playSound('$catMood.$extension');
+          playSound(myCatMood.catMood + '.' + myCatMood.extension);
         },
-        child: Image.asset('images/$catMood.png'),
+        child: Image.asset('images/' + myCatMood.catMood + '.png'),
       ),
     );
   }
@@ -57,44 +55,58 @@ class _CatAppClassState extends State<CatAppClass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF0997D),
+      backgroundColor: kBackgroundColorApp,
       appBar: AppBar(
         title: Text('Choose a cat'),
-        backgroundColor: Color(0xffA75D5D),
+        backgroundColor: kBackgroundColorAppBar,
       ),
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
             child: Row(
               children: [
-                buildCat(catMood: 'angry', color: kImgColorDark),
-                buildCat(catMood: 'purring', color: kImgColorLight),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Row(
-              children: [
-                buildCat(catMood: 'sad', color: kImgColorLight),
                 buildCat(
-                    catMood: 'puzzled', color: kImgColorDark, extension: 'mp3'),
+                  myCatMood: myMoodList.getCatMood(),
+                ),
+                buildCat(
+                  myCatMood: myMoodList.getCatMood(),
+                ),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                buildCat(catMood: 'short_meow', color: kImgColorDark),
-                buildCat(catMood: 'surprised', color: kImgColorLight),
+                buildCat(
+                  myCatMood: myMoodList.getCatMood(),
+                ),
+                buildCat(
+                  myCatMood: myMoodList.getCatMood(),
+                ),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                buildCat(catMood: 'upset', color: kImgColorLight),
-                buildCat(catMood: 'cat_food', color: kImgColorDark),
+                buildCat(
+                  myCatMood: myMoodList.getCatMood(),
+                ),
+                buildCat(
+                  myCatMood: myMoodList.getCatMood(),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                buildCat(
+                  myCatMood: myMoodList.getCatMood(),
+                ),
+                buildCat(
+                  myCatMood: myMoodList.getCatMood(),
+                ),
               ],
             ),
           ),
