@@ -29,14 +29,7 @@ class CatAppClass extends StatefulWidget {
 
 class _CatAppClassState extends State<CatAppClass> {
   MoodList myMoodList = MoodList();
-
   AudioPlayer player = AudioPlayer();
-
-  void playSound(String nameOfFile) {
-    player.play(
-      AssetSource(nameOfFile),
-    );
-  }
 
   Expanded buildCat({required CatMood myCatMood}) {
     return Expanded(
@@ -45,7 +38,9 @@ class _CatAppClassState extends State<CatAppClass> {
           primary: myCatMood.color,
         ),
         onPressed: () {
-          playSound(myCatMood.catMood + '.' + myCatMood.extension);
+          player.play(
+            AssetSource(myCatMood.catMood + '.' + myCatMood.extension),
+          );
         },
         child: Image.asset('images/' + myCatMood.catMood + '.png'),
       ),
